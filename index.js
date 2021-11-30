@@ -1,2 +1,2 @@
-const fetch2 = require('./build/fetch2');
-module.exports = fetch2;
+const fetchw = require('./build/fetchw');
+module.exports = fetchw;
