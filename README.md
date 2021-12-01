@@ -1,6 +1,6 @@
-# custom-sorts
+# fetchw
 
-This library is fetch utils.
+This library is fetch wrapper.
 
 ## Installation
 
