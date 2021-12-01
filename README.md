@@ -20,14 +20,48 @@ This is all you need to get started:
 
 ```ts
 const fetchw = require('fetchw');
-fetchw.get('/');
+fetchw.get({ endpoint: '/users' });
+
+fetchw.patch({
+  endpoint: '/users',
+  payload: {
+    uuid,
+    username,
+  },
+});
+
+fetchw.post({
+  endpoint: '/users',
+  payload: {
+    email,
+    username,
+    password,
+  },
+});
 ```
 
 ### or es6
 
 ```ts
 import { get } from 'fetchw';
-get('/');
+get({ endpoint: '/users' });
+
+patch({
+  endpoint: '/users',
+  payload: {
+    uuid,
+    username,
+  },
+});
+
+post({
+  endpoint: '/users',
+  payload: {
+    email,
+    username,
+    password,
+  },
+});
 ```
 
 ## License
