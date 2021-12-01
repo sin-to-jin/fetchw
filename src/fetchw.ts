@@ -17,7 +17,7 @@ const defaultErrorCallback = (error: any) => {
 
 const fetchw = ({
   endpoint,
-  method,
+  method = 'GET',
   payload,
   headers = defaultHeaders,
   successCallback = defaultSuccessCallback,
