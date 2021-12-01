@@ -34,7 +34,7 @@ const fetchw = ({
       }
     })
     .then((response) => {
-      successCallback(response);
+      return successCallback(response);
     })
     .catch((error) => {
       errorCallback(error);
