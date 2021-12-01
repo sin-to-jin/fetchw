@@ -48,8 +48,8 @@ const get = ({
   headers = defaultHeaders,
   successCallback = defaultSuccessCallback,
   errorCallback = defaultErrorCallback,
-}: ApiRequest) => {
-  fetchw({
+}: ApiRequest): Promise<void> => {
+  return fetchw({
     method: 'GET',
     endpoint,
     headers,
@@ -64,8 +64,8 @@ const patch = ({
   headers = defaultHeaders,
   successCallback = defaultSuccessCallback,
   errorCallback = defaultErrorCallback,
-}: ApiRequest) => {
-  fetchw({
+}: ApiRequest): Promise<void> => {
+  return fetchw({
     method: 'PATCH',
     endpoint,
     payload,
@@ -81,8 +81,8 @@ const put = ({
   headers = defaultHeaders,
   successCallback = defaultSuccessCallback,
   errorCallback = defaultErrorCallback,
-}: ApiRequest) => {
-  fetchw({
+}: ApiRequest): Promise<void> => {
+  return fetchw({
     method: 'PUT',
     endpoint,
     payload,
@@ -98,8 +98,8 @@ const post = ({
   headers = defaultHeaders,
   successCallback = defaultSuccessCallback,
   errorCallback = defaultErrorCallback,
-}: ApiRequest) => {
-  fetchw({
+}: ApiRequest): Promise<void> => {
+  return fetchw({
     method: 'POST',
     endpoint,
     payload,
@@ -115,8 +115,8 @@ const destroy = ({
   headers = defaultHeaders,
   successCallback = defaultSuccessCallback,
   errorCallback = defaultErrorCallback,
-}: ApiRequest) => {
-  fetchw({
+}: ApiRequest): Promise<void> => {
+  return fetchw({
     method: 'DELETE',
     endpoint,
     payload,
