@@ -15,7 +15,7 @@ const defaultErrorCallback = (error: any) => {
   console.error(error);
 };
 
-const apiCall = ({
+const fetchw = ({
   endpoint,
   method,
   payload,
@@ -41,4 +41,89 @@ const apiCall = ({
     });
 };
 
-export { apiCall };
+export default fetchw;
+
+const get = ({
+  endpoint,
+  headers = defaultHeaders,
+  successCallback = defaultSuccessCallback,
+  errorCallback = defaultErrorCallback,
+}: ApiRequest) => {
+  fetchw({
+    method: 'GET',
+    endpoint,
+    headers,
+    successCallback,
+    errorCallback,
+  });
+};
+
+const patch = ({
+  endpoint,
+  payload,
+  headers = defaultHeaders,
+  successCallback = defaultSuccessCallback,
+  errorCallback = defaultErrorCallback,
+}: ApiRequest) => {
+  fetchw({
+    method: 'PATCH',
+    endpoint,
+    payload,
+    headers,
+    successCallback,
+    errorCallback,
+  });
+};
+
+const put = ({
+  endpoint,
+  payload,
+  headers = defaultHeaders,
+  successCallback = defaultSuccessCallback,
+  errorCallback = defaultErrorCallback,
+}: ApiRequest) => {
+  fetchw({
+    method: 'PUT',
+    endpoint,
+    payload,
+    headers,
+    successCallback,
+    errorCallback,
+  });
+};
+
+const post = ({
+  endpoint,
+  payload,
+  headers = defaultHeaders,
+  successCallback = defaultSuccessCallback,
+  errorCallback = defaultErrorCallback,
+}: ApiRequest) => {
+  fetchw({
+    method: 'POST',
+    endpoint,
+    payload,
+    headers,
+    successCallback,
+    errorCallback,
+  });
+};
+
+const destroy = ({
+  endpoint,
+  payload,
+  headers = defaultHeaders,
+  successCallback = defaultSuccessCallback,
+  errorCallback = defaultErrorCallback,
+}: ApiRequest) => {
+  fetchw({
+    method: 'DELETE',
+    endpoint,
+    payload,
+    headers,
+    successCallback,
+    errorCallback,
+  });
+};
+
+export { get, post, patch, put, destroy };

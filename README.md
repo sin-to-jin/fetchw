@@ -5,13 +5,13 @@ This library is fetch utils.
 ## Installation
 
 ```shell
-npm install fetch2
+npm install fetchw
 ```
 
 ### or
 
 ```shell
-yarn add fetch2
+yarn add fetchw
 ```
 
 ## Usage
@@ -19,15 +19,17 @@ yarn add fetch2
 This is all you need to get started:
 
 ```ts
-const fetch2 = require('fetch2');
+const fetchw = require('fetchw');
+fetchw.get('/');
 ```
 
 ### or es6
 
 ```ts
-import { api } from 'fetch2';
+import { get } from 'fetchw';
+get('/');
 ```
 
 ## License
 
-[MIT](https://github.com/ogasawaraShinnosuke/fetch2/blob/main/LICENSE)
+[MIT](https://github.com/ogasawaraShinnosuke/fetchw/blob/main/LICENSE)
